@@ -24,14 +24,36 @@ LANGUAGE=VHDL
 REFRESH_FLOW=1
 FLOWTOOLS=NONE
 FAMILY=
-fileopenfolder=C:\Users\Asus\Downloads
+fileopenfolder=C:\Users\Asus\Source\VHDL\storage-devices\source\storage_devices\src\task 2.1
+VerilogDirsChanged=1
 
 [LocalVerilogSets]
 EnableSLP=1
 EnableDebug=0
+VerilogLanguage=4
+Strict=0
+VerilogNoSpecify=0
+WarningPrnLevel=1
+ErrorOutputLimit=0
+OptimizationLevel=2
+ProtectLevel=0
+AdditionalOptions=
 
 [LocalVhdlSets]
 CompileWithDebug=0
+DisableVHDL87Key=0
+EnableVHDL93Key=0
+EnableVHDL2002Key=0
+EnableVHDL2006Key=0
+EnableVHDL2008Key=1
+NetlistCompilation=1
+Syntax RelaxLRM=0
+MaxErrorsKey=100
+OptimizationLevel=3
+DisableRangeChecks=0
+ProtectLevel=0
+AdditionalOptions=
+IncrementalCompilation=0
 
 [$LibMap$]
 microprogram_control_devices=.
@@ -39,7 +61,7 @@ Active_lib=
 
 [HierarchyViewer]
 SortInfo=u
-HierarchyInformation=trafficlight_tb|testbench_for_trafficlight|1 
+HierarchyInformation=trafficlight_tb|TB_ARCHITECTURE|0 
 ShowHide=ShowTopLevel
 Selected=
 
@@ -47,13 +69,22 @@ Selected=
 task 1=1
 test-bench=1
 test-bench\task 1=1
+task 2=1
+
+[DefineMacro]
+Global=
 
 [Files]
 task 1/TrafficLight.vhd=-1
 test-bench\task 1/trafficlight_TB.vhd=-1
 test-bench\task 1/trafficlight_TB_runtest.do=-1
+task 2/ROM.vhd=-1
+task 2/RAM.vhd=-1
 
 [Files.Data]
 .\src\task 1\TrafficLight.vhd=VHDL Source Code
 .\src\test-bench\task 1\trafficlight_TB.vhd=VHDL Test Bench
 .\src\test-bench\task 1\trafficlight_TB_runtest.do=Macro
+.\src\task 2\ROM.vhd=VHDL Source Code
+.\src\task 2\RAM.vhd=VHDL Source Code
+
