@@ -1,0 +1,59 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=microprogram_control_devices
+
+[Library]
+microprogram_control_devices=.\microprogram_control_devices.LIB
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=C:\Users\Asus\Downloads
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+microprogram_control_devices=.
+Active_lib=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=trafficlight_tb|testbench_for_trafficlight|1 
+ShowHide=ShowTopLevel
+Selected=
+
+[Groups]
+task 1=1
+test-bench=1
+test-bench\task 1=1
+
+[Files]
+task 1/TrafficLight.vhd=-1
+test-bench\task 1/trafficlight_TB.vhd=-1
+test-bench\task 1/trafficlight_TB_runtest.do=-1
+
+[Files.Data]
+.\src\task 1\TrafficLight.vhd=VHDL Source Code
+.\src\test-bench\task 1\trafficlight_TB.vhd=VHDL Test Bench
+.\src\test-bench\task 1\trafficlight_TB_runtest.do=Macro

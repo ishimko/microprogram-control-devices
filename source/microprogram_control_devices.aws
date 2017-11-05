@@ -1,7 +1,7 @@
 [Version]
 Version=9.1
 [Designs]
-microprogram-control-devices=.\microprogram-control-devices\microprogram-control-devices.adf
+microprogram_control_devices=.\microprogram_control_devices\microprogram_control_devices.adf
 [Browser]
 sort=order
 mode=none
@@ -9,4 +9,4 @@ mode=none
 order=1
 macro=
 [Expand]
-microprogram-control-devices=1
+microprogram_control_devices=1
