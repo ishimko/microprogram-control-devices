@@ -65,19 +65,20 @@ HierarchyInformation=trafficlight_tb|TB_ARCHITECTURE|0
 ShowHide=ShowTopLevel
 Selected=
 
+[DefineMacro]
+Global=
+
 [Groups]
 task 1=1
 test-bench=1
 test-bench\task 1=1
 task 2=1
 
-[DefineMacro]
-Global=
-
 [Files]
 task 1/TrafficLight.vhd=-1
 test-bench\task 1/trafficlight_TB.vhd=-1
 test-bench\task 1/trafficlight_TB_runtest.do=-1
+task 2/ALU.vhd=-1
 task 2/ROM.vhd=-1
 task 2/RAM.vhd=-1
 
@@ -85,6 +86,7 @@ task 2/RAM.vhd=-1
 .\src\task 1\TrafficLight.vhd=VHDL Source Code
 .\src\test-bench\task 1\trafficlight_TB.vhd=VHDL Test Bench
 .\src\test-bench\task 1\trafficlight_TB_runtest.do=Macro
+.\src\task 2\ALU.vhd=VHDL Source Code
 .\src\task 2\ROM.vhd=VHDL Source Code
 .\src\task 2\RAM.vhd=VHDL Source Code
 
