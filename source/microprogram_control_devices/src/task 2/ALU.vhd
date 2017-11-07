@@ -3,6 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 use work.types.all;
+use work.opcodes.all;
 
 
 entity ALU is
@@ -23,12 +24,6 @@ architecture beh of ALU is
 	signal inc_result: data_word;
 	signal dec_result: data_word;
 	signal zero, sign: std_logic;
-	
-	constant LOAD: operation_word := "0000";
-	constant ADD: operation_word := "0001";
-	constant SUB: operation_word := "0010";
-	constant INC: operation_word := "0011";
-	constant DEC: operation_word := "0100";
 begin	
 	add_result <= accumulator + operand;
 	sub_result <= accumulator - operand;
@@ -39,11 +34,11 @@ begin
 	begin	   
 		if rising_edge(enable) then
 			case operation is
-				when LOAD => accumulator <= operand;
-				when ADD => accumulator <= add_result;
-				when SUB => accumulator <= sub_result;
-				when INC => accumulator <= inc_result;
-				when DEC => accumulator <= dec_result;
+				when OP_LOAD => accumulator <= operand;
+				when OP_ADD => accumulator <= add_result;
+				when OP_SUB => accumulator <= sub_result;
+				when OP_INC => accumulator <= inc_result;
+				when OP_DEC => accumulator <= dec_result;
 				when others => NULL;
 			end case;
 		end if;

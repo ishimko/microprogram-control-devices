@@ -2,7 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use work.types.all;
-use work.common.all;
+use work.util.all;
+use work.opcodes.all;
 
 entity CTRL is
 	port (
@@ -56,18 +57,6 @@ architecture beh of CTRL is
 	signal address: address_word;
 	signal data: data_word;
 	signal FSR: data_word;
-	
-	constant OP_LOAD: operation_word := "0000";
-	constant OP_STORE: operation_word := "0001";
-	constant OP_ADD: operation_word := "0010";
-	constant OP_SUB: operation_word := "0011";
-	constant OP_INC: operation_word := "0100";
-	constant OP_DEC: operation_word := "0101";
-	constant OP_JNZ: operation_word := "0110";
-	constant OP_JZ: operation_word := "0111";
-	constant OP_JNSB: operation_word := "1000";
-	constant OP_JMP: operation_word := "1001";
-	constant OP_HALT: operation_word := "1010";
 	
 	constant INDF_ADDRESS: address_word := "100000";
 	constant FSR_ADDRESS: address_word := "100001";

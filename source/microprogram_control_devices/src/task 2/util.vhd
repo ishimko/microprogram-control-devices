@@ -1,11 +1,11 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-package Common is
+package Util is
 	function to_std_logic(b: boolean) return std_logic;
 end package;
 
-package body Common is
+package body Util is
 	function to_std_logic(b: boolean) return std_logic is 
 	begin 
 		if b then 

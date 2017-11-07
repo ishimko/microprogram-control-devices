@@ -11,7 +11,6 @@ entity RAM is
 		initial_state: TRAM(0 to 2**address_size-1)(word_size-1 downto 0) := (others => (others => '0'))
 		);
 	port (
-		CLK: in std_logic;
 		write_enable: in std_logic;
 		address_bus: in std_logic_vector(address_size-1 downto 0);
 		data_bus: inout std_logic_vector(word_size-1 downto 0)
@@ -24,21 +23,17 @@ architecture beh of RAM is
 begin
 	address_value <= conv_integer(address_bus);
 	
-	write_data: process(CLK, data_bus, ram_storage, address_value, write_enable)
+	write_data: process(data_bus, ram_storage, address_value, write_enable)
 	begin	
-		if write_enable = '1' then	
-			if rising_edge(CLK) then
-				ram_storage(address_value) <= data_bus;
-			end if;
+		if write_enable = '1' then
+			ram_storage(address_value) <= data_bus;
 		end if;
 	end process;
 	
-	read_data: process(CLK, data_bus, ram_storage, address_value, write_enable)
+	read_data: process(data_bus, ram_storage, address_value, write_enable)
 	begin
 		if write_enable = '0' then
-			if rising_edge(CLK) then
-				data_bus <= ram_storage(address_value);
-			end if;
+			data_bus <= ram_storage(address_value);
 		else
 			data_bus <= (others => 'Z');
 		end if;
