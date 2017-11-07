@@ -1,15 +1,16 @@
 library ieee;
 use ieee.STD_LOGIC_UNSIGNED.all;
 use ieee.std_logic_1164.all;
-use work.types.all;
+use work.types.all;					  
+use work.parameters.all;
 
 entity ControllerDevice is
 	generic (
-		ROM_word_size: integer := 10;
-		ROM_address_size: integer := 6;
+		ROM_word_size: integer := default_ROM_word_size;
+		ROM_address_size: integer := default_ROM_address_size;
 		ROM_state: TROM(0 to 2**ROM_address_size-1)(ROM_word_size-1 downto 0) := (others => (others => '0'));
-		RAM_word_size: integer := 8;
-		RAM_address_size: integer := 2;
+		RAM_word_size: integer := default_RAM_word_size;
+		RAM_address_size: integer := default_RAM_address_size;
 		RAM_initial_state: TRAM(0 to 2**RAM_address_size-1)(RAM_word_size-1 downto 0) := (others => (others => '0'))
 		);
 	port (

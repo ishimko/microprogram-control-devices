@@ -164,7 +164,11 @@ begin
 	
 	update_RAM_write_enable: process(current_state)
 	begin
-		RAM_write_enable <= to_std_logic(current_state = STORE and address /= FSR_ADDRESS);
+		if (current_state = STORE and address /= FSR_ADDRESS) then
+			RAM_write_enable <= '1';
+		else
+			RAM_write_enable <= '0';
+		end if;
 	end process;
 	
 	write_to_FSR: process(current_state)
@@ -180,7 +184,6 @@ begin
 			if (address = FSR) then
 				data <= FSR;
 			else
-				RAM_data <= (others => 'Z');
 				data <= RAM_data;
 			end if;
 		end if;

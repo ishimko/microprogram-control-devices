@@ -2,12 +2,13 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_ARITH.all;
 use IEEE.STD_LOGIC_UNSIGNED.all;
-use work.types.all;
+use work.types.all;									
+use work.parameters.all;
 
 entity RAM is
 	generic (
-		word_size: integer := 8;
-		address_size: integer := 2;
+		word_size: integer := default_RAM_word_size;
+		address_size: integer := default_RAM_address_size;
 		initial_state: TRAM(0 to 2**address_size-1)(word_size-1 downto 0) := (others => (others => '0'))
 		);
 	port (
@@ -27,6 +28,7 @@ begin
 	begin	
 		if write_enable = '1' then
 			ram_storage(address_value) <= data_bus;
+			report "kek11" severity note;
 		end if;
 	end process;
 	
@@ -34,8 +36,10 @@ begin
 	begin
 		if write_enable = '0' then
 			data_bus <= ram_storage(address_value);
+			report "kek" severity note;
 		else
 			data_bus <= (others => 'Z');
+			report "kek1" severity note;
 		end if;
 	end process;
 end beh;

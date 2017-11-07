@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use work.parameters.all;
 
 package Types is
 	subtype data_word is std_logic_vector(7 downto 0);
