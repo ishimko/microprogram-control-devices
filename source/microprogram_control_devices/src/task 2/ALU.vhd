@@ -2,23 +2,21 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
+use work.types.all;
 
 
 entity ALU is
 	port(
 		enable: in std_logic;
-		operation: in std_logic_vector(3 downto 0);
-		operand: in std_logic_vector(7 downto 0);
-		result: out std_logic_vector(7 downto 0);
+		operation: in operation_word;
+		operand: in data_word;
+		result: out data_word;
 		zero_flag: out std_logic;
 		sign_bit: out std_logic
 		);
 end ALU;
 
 architecture beh of ALU is
-	subtype data_word is std_logic_vector(7 downto 0);
-	subtype operation_word is std_logic_vector(3 downto 0);
-	
 	signal accumulator: data_word;
 	signal add_result: data_word;
 	signal sub_result: data_word;

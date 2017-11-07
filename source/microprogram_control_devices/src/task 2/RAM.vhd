@@ -2,11 +2,13 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_ARITH.all;
 use IEEE.STD_LOGIC_UNSIGNED.all;
+use work.types.all;
 
 entity RAM is
 	generic (
 		word_size: integer := 8;
-		address_size: integer := 2
+		address_size: integer := 2;
+		initial_state: TRAM(0 to 2**address_size-1)(word_size-1 downto 0) := (others => (others => '0'))
 		);
 	port (
 		CLK: in std_logic;
@@ -16,10 +18,8 @@ entity RAM is
 		);
 end RAM;
 
-architecture beh of RAM is	 
-	type RAM is array(0 to 2**address_size-1) of std_logic_vector(word_size-1 downto 0);
-	
-	signal ram_storage: RAM;
+architecture beh of RAM is
+	signal ram_storage: TRAM(0 to 2**address_size-1)(word_size-1 downto 0) := initial_state;
 	signal address_value: integer range 0 to 2**address_size-1;
 begin
 	address_value <= conv_integer(address_bus);

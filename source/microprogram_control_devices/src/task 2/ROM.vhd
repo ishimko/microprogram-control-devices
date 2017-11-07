@@ -1,21 +1,14 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
-
-package ROM_package is
-	type ROM is array(natural range <>) of std_logic_vector;
-end package;
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_ARITH.all;
 use IEEE.STD_LOGIC_UNSIGNED.all;
-use work.ROM_package.all;
+use work.types.all;
 
 entity ROM is
 	generic (
 		word_size: integer := 10;
 		address_size: integer := 6;
-		state: ROM(0 to 2**address_size-1)(word_size-1 downto 0) := (others => (others => '0'))
+		state: TROM(0 to 2**address_size-1)(word_size-1 downto 0) := (others => (others => '0'))
 		);						   
 	port (
 		read_enable: in std_logic;
