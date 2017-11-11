@@ -75,6 +75,7 @@ test-bench\task 1=1
 test-bench\task 2=1
 test-bench\task 2\find_max=1
 test-bench\task 2\sort=1
+test-bench\task 2\count_zeros=1
 task 2=1
 
 [Files]
@@ -85,6 +86,8 @@ test-bench\task 2\find_max/find_max.vhd=-1
 test-bench\task 2\find_max/find_max.do=-1
 test-bench\task 2\sort/sort.do=-1
 test-bench\task 2\sort/sort.vhd=-1
+test-bench\task 2\count_zeros/count_zeros.do=-1
+test-bench\task 2\count_zeros/count_zeros.vhd=-1
 task 2/parameters.vhd=-1
 task 2/opcodes.vhd=-1
 task 2/controller_device.vhd=-1
@@ -103,6 +106,8 @@ task 2/RAM.vhd=-1
 .\src\test-bench\task 2\find_max\find_max.do=Macro
 .\src\test-bench\task 2\sort\sort.do=Macro
 .\src\test-bench\task 2\sort\sort.vhd=VHDL Source Code
+.\src\test-bench\task 2\count_zeros\count_zeros.do=Macro
+.\src\test-bench\task 2\count_zeros\count_zeros.vhd=VHDL Source Code
 .\src\task 2\parameters.vhd=VHDL Source Code
 .\src\task 2\opcodes.vhd=VHDL Source Code
 .\src\task 2\controller_device.vhd=VHDL Source Code
