@@ -68,28 +68,13 @@ Selected=
 [DefineMacro]
 Global=
 
-[Files.Data]
-.\src\task 1\TrafficLight.vhd=VHDL Source Code
-.\src\test-bench\task 1\trafficlight_TB.vhd=VHDL Test Bench
-.\src\test-bench\task 1\trafficlight_TB_runtest.do=Macro
-.\src\task 2\parameters.vhd=VHDL Source Code
-.\src\task 2\opcodes.vhd=VHDL Source Code
-.\src\task 2\controller_device.vhd=VHDL Source Code
-.\src\task 2\util.vhd=VHDL Source Code
-.\src\task 2\types.vhd=VHDL Source Code
-.\src\task 2\CTRL.vhd=VHDL Source Code
-.\src\task 2\ALU.vhd=VHDL Source Code
-.\src\task 2\ROM.vhd=VHDL Source Code
-.\src\task 2\RAM.vhd=VHDL Source Code
-.\src\test-bench\task 2\find_max\find_max.vhd=VHDL Source Code
-.\src\test-bench\task 2\find_max\find_max.do=Macro
-
 [Groups]
 task 1=1
 test-bench=1
 test-bench\task 1=1
 test-bench\task 2=1
 test-bench\task 2\find_max=1
+test-bench\task 2\sort=1
 task 2=1
 
 [Files]
@@ -98,6 +83,8 @@ test-bench\task 1/trafficlight_TB.vhd=-1
 test-bench\task 1/trafficlight_TB_runtest.do=-1
 test-bench\task 2\find_max/find_max.vhd=-1
 test-bench\task 2\find_max/find_max.do=-1
+test-bench\task 2\sort/sort.do=-1
+test-bench\task 2\sort/sort.vhd=-1
 task 2/parameters.vhd=-1
 task 2/opcodes.vhd=-1
 task 2/controller_device.vhd=-1
@@ -107,4 +94,22 @@ task 2/CTRL.vhd=-1
 task 2/ALU.vhd=-1
 task 2/ROM.vhd=-1
 task 2/RAM.vhd=-1
+
+[Files.Data]
+.\src\task 1\TrafficLight.vhd=VHDL Source Code
+.\src\test-bench\task 1\trafficlight_TB.vhd=VHDL Test Bench
+.\src\test-bench\task 1\trafficlight_TB_runtest.do=Macro
+.\src\test-bench\task 2\find_max\find_max.vhd=VHDL Source Code
+.\src\test-bench\task 2\find_max\find_max.do=Macro
+.\src\test-bench\task 2\sort\sort.do=Macro
+.\src\test-bench\task 2\sort\sort.vhd=VHDL Source Code
+.\src\task 2\parameters.vhd=VHDL Source Code
+.\src\task 2\opcodes.vhd=VHDL Source Code
+.\src\task 2\controller_device.vhd=VHDL Source Code
+.\src\task 2\util.vhd=VHDL Source Code
+.\src\task 2\types.vhd=VHDL Source Code
+.\src\task 2\CTRL.vhd=VHDL Source Code
+.\src\task 2\ALU.vhd=VHDL Source Code
+.\src\task 2\ROM.vhd=VHDL Source Code
+.\src\task 2\RAM.vhd=VHDL Source Code
 
