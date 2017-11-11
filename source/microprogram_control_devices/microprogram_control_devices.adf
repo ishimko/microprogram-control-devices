@@ -61,7 +61,7 @@ Active_lib=
 
 [HierarchyViewer]
 SortInfo=u
-HierarchyInformation=find_max|beh|0 ram|beh|0
+HierarchyInformation=count_zeros|beh|0 find_max|beh|0 ram|beh|0 sort|beh|0 
 ShowHide=ShowTopLevel
 Selected=
 
@@ -117,4 +117,3 @@ task 2/RAM.vhd=-1
 .\src\task 2\ALU.vhd=VHDL Source Code
 .\src\task 2\ROM.vhd=VHDL Source Code
 .\src\task 2\RAM.vhd=VHDL Source Code
-

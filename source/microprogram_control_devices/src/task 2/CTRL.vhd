@@ -58,8 +58,8 @@ architecture beh of CTRL is
 	signal data: data_word;
 	signal FSR: data_word;
 	
-	constant INDF_ADDRESS: address_word := "100000";
-	constant FSR_ADDRESS: address_word := "100001";
+	constant INDF_ADDRESS: address_word := "111111";
+	constant FSR_ADDRESS: address_word := "111110";
 begin
 	save_state: process(CLK, RST, next_state)
 	begin		

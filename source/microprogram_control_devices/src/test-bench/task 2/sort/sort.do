@@ -10,4 +10,4 @@ wave -noreg Start
 wave -noreg Stop
 wave -virtual array "UDEVICE/URAM/ram_storage(6 to 10)"
 
-run 15 us
+run 20 us
