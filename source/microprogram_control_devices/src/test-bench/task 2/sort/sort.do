@@ -8,6 +8,6 @@ wave -noreg CLK
 wave -noreg RST
 wave -noreg Start
 wave -noreg Stop
-wave -virtual array "/sort/UDEVICE/URAM/ram_storage(6 to 10)"
+wave -virtual array "UDEVICE/URAM/ram_storage(6 to 10)"
 
 run 15 us

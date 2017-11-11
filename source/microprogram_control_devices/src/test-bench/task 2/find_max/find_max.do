@@ -8,7 +8,7 @@ wave -noreg CLK
 wave -noreg RST
 wave -noreg Start
 wave -noreg Stop
-wave -virtual result /find_max/UDEVICE/URAM/ram_storage(6)
-wave -virtual array "/find_max/UDEVICE/URAM/ram_storage(1 to 5)"
+wave -virtual result UDEVICE/URAM/ram_storage(6)
+wave -virtual array "UDEVICE/URAM/ram_storage(1 to 5)"
 
 run 2 us
