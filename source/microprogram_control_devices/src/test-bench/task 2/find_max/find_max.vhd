@@ -70,7 +70,7 @@ begin
 		stop => stop
 		);
 		
-	clk <= not clk after clock_period;
+	clk <= not clk after clock_period / 2;
 	
 	stimulate: process
 	begin

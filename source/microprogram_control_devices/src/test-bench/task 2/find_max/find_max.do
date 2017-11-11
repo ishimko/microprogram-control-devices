@@ -11,4 +11,4 @@ wave -noreg Stop
 wave -virtual result UDEVICE/URAM/ram_storage(6)
 wave -virtual array "UDEVICE/URAM/ram_storage(1 to 5)"
 
-run 2 us
+run 1 us
