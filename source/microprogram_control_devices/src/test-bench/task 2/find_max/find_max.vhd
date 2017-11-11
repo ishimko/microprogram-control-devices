@@ -43,19 +43,12 @@ architecture beh of find_max is
 	
 	constant RAM_initial_state: TRAM(0 to 2**default_RAM_address_size-1)(default_RAM_word_size-1 downto 0) := (
 	"00000101",	-- 5 | 000000 | array length
-		
 	"00000011", -- 3 | 000001 | a[0]
-		
 	"00000001", -- 1 | 000010 | a[1]
-		
 	"00000010", -- 2 | 000011 | a[2]
-		
 	"00000100", -- 4 | 000100 | a[3]
-		
 	"00000101", -- 5 | 000101 | a[4]
-		
-	"00000000", -- 0 | 000110 |	result
-		
+	"00000000", -- 0 | 000110 |	result	
 	others => "00000000"	
 	);
 	
