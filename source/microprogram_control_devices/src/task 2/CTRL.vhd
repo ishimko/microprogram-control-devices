@@ -194,8 +194,8 @@ begin
 		ALU_enable <= to_std_logic(current_state = ADD or current_state = SUB or current_state = INC or current_state = DEC or current_state = LOAD);
 	end process;
 	
-	RAM_data <= ALU_result;
-	
+	ROM_address <= instruction_pointer;
+	RAM_data <= ALU_result when RAM_write_enable = '1' else (others => 'Z');
 	ALU_operand <= data;
 	ALU_operation <= operation;
 end beh;
