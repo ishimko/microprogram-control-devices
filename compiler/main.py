@@ -37,7 +37,7 @@ def compile(path):
                 operand = elements[1]
             else:
                 operand = ''
-            operand_repr = operand if operand else '1'*OPERAND_LENGTH
+            operand_repr = operand if operand else '0'*OPERAND_LENGTH
             if operand_repr in CONSTS:
                 operand_repr = CONSTS[operand_repr]
             command_number = bin(i)[2:].zfill(OPERAND_LENGTH)
