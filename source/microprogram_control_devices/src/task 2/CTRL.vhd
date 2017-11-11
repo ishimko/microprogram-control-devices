@@ -156,6 +156,7 @@ begin
 		if (current_state /= JMP and current_state /= JNZ and current_state /= JZ and current_state /= JNSB) then
 			if (address = INDF_ADDRESS) then
 				RAM_address <= FSR(5 downto 0);
+				report "INFD" severity note;
 			elsif (address /= FSR_ADDRESS) then
 				RAM_address <= address;
 			end if;
@@ -181,7 +182,7 @@ begin
 	read_RAM: process(current_state)
 	begin		
 		if (current_state = READ) then
-			if (address = FSR) then
+			if (address = FSR_ADDRESS) then
 				data <= FSR;
 			else
 				data <= RAM_data;
