@@ -8,7 +8,7 @@ wave -noreg CLK
 wave -noreg RST
 wave -noreg Start
 wave -noreg Stop
-wave /find_max/UDEVICE/URAM/*
-wave /find_max/UDEVICE/UCTRL/*
+wave /find_max/UDEVICE/URAM/ram_storage(6)
+wave "/find_max/UDEVICE/URAM/ram_storage(0 to 5)"
 
-run 1 us
+run 2 us
